@@ -1,0 +1,58 @@
+
+.wrapper {
+    background-color:#4e4e5c;  
+    border-radius: 5px;
+    margin: auto 10px; 
+   
+}
+.wrapperDownPart {   
+    padding: 10px;      
+    margin-bottom: 10px; 
+}
+.wrapperUpPart {    
+    padding: 10px;     
+}
+
+.curBal{    
+    display: flex;
+    flex-direction: row;
+}
+.curBal img {
+    width: 40px;
+    height: auto;
+}
+.curUp {
+    color: whitesmoke;
+    font-size: 16px;
+    margin-left: 5px;
+    display: flex;    
+    justify-content: space-between;
+}
+.curDown {
+    color: rgb(153, 153, 152);
+    font-size: 13px;
+    margin-left: 5px;
+    display: flex;    
+    justify-content: space-between;
+}
+.container{
+    width: 100%;
+}
+
+.price{
+    color: whitesmoke;
+    font-size: 16px; 
+    display: flex;    
+    justify-content: space-between;
+}
+
+.text{
+    color: rgb(153, 153, 152);
+    font-size: 13px;
+    display: flex;    
+    justify-content: space-between;
+}
+
+.priceColor{
+    color:#0cdb83;
+}
