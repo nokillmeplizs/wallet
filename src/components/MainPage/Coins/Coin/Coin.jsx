@@ -1,20 +1,37 @@
 import React from 'react';
 import s from './Coin.module.css';
 import Bitcoin from './../../../../assets/btc.svg';
+import Ethereum from './../../../../assets/eth.png';
+import Ripple from './../../../../assets/xrp.png'
 
 const Coin = (props) => {
+    
+     let icon = (coinFullname) =>{
+       switch(coinFullname){
+        case "Bitcoin":
+           return Bitcoin;
+        case "Ethereum":
+            return Ethereum;
+        case "Ripple":
+                return Ripple;
+        default:
+             return "https://www.freepngimg.com/thumb/symbol/88475-exclamation-icons-text-question-mark-computer-red-thumb.png"
+       }       
+     }
+  
+
     return (
         <div className = {s.wrapper}>
             <div className = {s.wrapperUpPart}>
                 <div className = {s.curBal}>                
-                    <img src={Bitcoin} alt =""></img>               
+                    <img src={icon(props.fullName)} alt =""></img>               
                     <div className = {s.container}>
                         <div className={s.curUp}>
-                            <div>BTC</div>
-                            <div>0.21234523</div>
+                            <div>{props.name}</div>
+                            <div>{props.amount}</div>
                         </div>  
                         <div className={s.curDown}>
-                            <span>Bitcoin</span>
+                            <span>{props.fullName}</span>
                             <span>$,1238.62</span>
                         </div> 
                     </div>              
@@ -24,7 +41,7 @@ const Coin = (props) => {
                 <div className = {s.curBal}>                             
                     <div className = {s.container}>
                         <div className={s.price}>
-                            <div>$6,752.24</div>
+                            <div>{props.coinPrice}</div>
                             <div className={s.priceColor}>+2.75%</div>
                         </div>  
                         <div className={s.text}>

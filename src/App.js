@@ -4,7 +4,7 @@ import { Route } from 'react-router-dom';
 import MainPage from './components/MainPage/MainPage'
 
 
-function App(props) {
+const App = (props) => {
   return (
     <div className="app-wrapper">
       <Route exact path="/" render={() => <MainPage />} />
