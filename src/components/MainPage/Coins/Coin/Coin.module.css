@@ -12,31 +12,24 @@
 .wrapperUpPart {    
     padding: 10px;     
 }
-
 .curBal{    
     display: flex;
     flex-direction: row;
-}
-.curBal img {
-    width: 40px;
-    height: auto;
-}
-.curUp {
-    color: whitesmoke;
-    font-size: 16px;
-    margin-left: 5px;
-    display: flex;    
-    justify-content: space-between;
 }
 .curDown {
     color: rgb(153, 153, 152);
     font-size: 13px;
     margin-left: 5px;
     display: flex;    
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 .container{
     width: 100%;
+}
+.containerUp{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 
 .price{
@@ -53,9 +46,13 @@
     justify-content: space-between;
 }
 
-.priceColorPlus{
-    color:#0cdb83;
+.endLine {
+    border:none;
+    margin: 0 10px;
+    background-color:rgba(141, 141, 141, 0.185);
+    color:rgba(141, 141, 141, 0.678);
+    height: 1px;
 }
-.priceColorMinus{
-    color:red;
+a {
+    text-decoration: none;
 }

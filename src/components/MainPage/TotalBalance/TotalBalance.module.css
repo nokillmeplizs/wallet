@@ -8,10 +8,16 @@
     margin-bottom: 20px;
 }
 
-.profit {
+.profitUP {
     color:#0cdb83;
     margin-bottom: 10px;
 }
+
+.profitDown {
+    color:red;
+    margin-bottom: 10px;
+}
+
 .wrapper {
     display:flex;
     flex-direction: column;  

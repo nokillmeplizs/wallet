@@ -5,7 +5,7 @@ import { TotalBalance } from './TotalBalance';
 const mapStateToProps = (state) => {
     return {
       state: state.coins.coins,
-      profit: state  
+      profit: state.coins.profitInCurrency  
     }
   }
   

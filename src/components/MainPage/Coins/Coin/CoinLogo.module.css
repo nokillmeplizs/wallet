@@ -1,0 +1,22 @@
+.curBal{    
+    display: flex;
+    flex-direction: row;
+}
+.curBal img {
+    width: 40px;
+    height: auto;
+}
+.curUp {
+    color: whitesmoke;
+    font-size: 16px;
+    margin-left: 5px;
+    display: flex;    
+    justify-content: space-between;
+}
+.curDown {
+    color: rgb(153, 153, 152);
+    font-size: 13px;
+    margin-left: 5px;
+    display: flex;    
+    justify-content: space-between;
+}
