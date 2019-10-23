@@ -18,7 +18,8 @@ const Coin = (props) => {
              return "https://www.freepngimg.com/thumb/symbol/88475-exclamation-icons-text-question-mark-computer-red-thumb.png"
        }       
      }
-  
+     
+    
 
     return (
         <div className = {s.wrapper}>
@@ -32,7 +33,7 @@ const Coin = (props) => {
                         </div>  
                         <div className={s.curDown}>
                             <span>{props.fullName}</span>
-                            <span>$,1238.62</span>
+                            <span>${(props.Price*props.amount).toFixed(2)}</span>
                         </div> 
                     </div>              
                 </div>
@@ -41,12 +42,12 @@ const Coin = (props) => {
                 <div className = {s.curBal}>                             
                     <div className = {s.container}>
                         <div className={s.price}>
-                            <div>{props.coinPrice}</div>
-                            <div className={s.priceColor}>+2.75%</div>
+                            <div>{props.Price}</div>
+                            <div className={props.profit>=0?s.priceColorPlus:s.priceColorMinus}>{props.profit}%</div>
                         </div>  
                         <div className={s.text}>
                             <span>price</span>
-                            <span>Profit/Loss</span>
+                            <span>Profit/Loss</span>                            
                         </div> 
                     </div>              
                 </div>

@@ -3,31 +3,43 @@ import Coin from './Coin/Coin'
 import * as axios from 'axios';
 
 
-class Coins extends React.Component {    
-   
+export class Coins extends React.Component {
+
     componentDidMount() {
-        axios.get("https://min-api.cryptocompare.com/data/pricemultifull?fsyms=ETH,BTC&tsyms=USD").then(response => {
-             this.props.setCoins(response.data)
-            console.log(response.data.RAW.BTC.USD.PRICE)
-            console.log(response.data.RAW.BTC.USD.CHANGEPCT24HOUR)
+        axios.get("https://min-api.cryptocompare.com/data/pricemultifull?fsyms=ETH,BTC,XRP&tsyms=USD").then(response => {
+            const prices = {};
+            let profit = {};
+            let profitInUsd = {};
+            const { RAW } = response.data;
+            for (let key in RAW) {
+                profitInUsd[key] = RAW[key].USD.CHANGE24HOUR;
+                prices[key] = RAW[key].USD.PRICE;
+                profit[key] = RAW[key].USD.CHANGEPCT24HOUR.toFixed(2);
+            }            
+            this.props.setPrices(prices);
+            this.props.setProfit(profit);
+            this.props.setProfitinCurrency(profitInUsd);
 
         });
+
     }
 
-    coins = this.props.coins
-    .map(c => <Coin key={c.id} 
-                    name={c.name} 
-                    fullName={c.fullName}
-                    amount={c.amount}
-                    coinPrice={c.coinPrice}/>)
-    render(){
+    coinList() {
+        return this.props.coins
+            .map(coin => <Coin key={coin.id}
+                name={coin.name}
+                fullName={coin.fullName}
+                amount={coin.amount}
+                Price={coin.Price}
+                profit={coin.profit} />)
+    }
+
+    render() {
         return (
-            <div className = "CoinsBlock">
-            {this.coins}
+            <div className="CoinsBlock">
+                {this.coinList()}
             </div>
         )
     }
-    
 }
 
-export default Coins;

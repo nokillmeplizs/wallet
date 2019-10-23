@@ -1,11 +1,11 @@
 import React from 'react';
-import TotalBalance from './TotalBalance/TotalBalance';
+import TotalBalanceContainer from './TotalBalance/TotalBalanceContainer';
 import CoinsContainer from './Coins/CoinsContainer';
 
 const MainPage = () => {
     return (
         <div>
-            <TotalBalance />
+            <TotalBalanceContainer />
             <CoinsContainer />
         </div>
     )

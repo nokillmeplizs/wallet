@@ -53,6 +53,9 @@
     justify-content: space-between;
 }
 
-.priceColor{
+.priceColorPlus{
     color:#0cdb83;
+}
+.priceColorMinus{
+    color:red;
 }

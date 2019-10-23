@@ -1,18 +1,24 @@
 import React from 'react';
 import  { connect } from 'react-redux';
-import Coins from './Coins';
-import { setCoinsAC } from '../../../redux/coins-reducer';
+import { Coins } from './Coins';
+import { setPricesAC,setProfitAC,setProfitInCurrencyAC } from '../../../redux/coins-reducer';
 
 const mapStateToProps = (state) => {
     return {
-      coins: state.coins.coins    
+      coins: state.coins.coins   
     }
   }
   
   const mapDispatchToProps = (dispatch) => {
     return {
-      setCoins: (coins) => {
-        dispatch(setCoinsAC(coins));
+      setPrices: (prices) => {
+        dispatch(setPricesAC(prices));
+      },
+      setProfit: (profit) => {
+        dispatch(setProfitAC(profit));
+      },
+      setProfitinCurrency: (profit) => {
+        dispatch(setProfitInCurrencyAC(profit));
       }
     }
   }
