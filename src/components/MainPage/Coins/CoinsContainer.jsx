@@ -1,4 +1,3 @@
-import React from 'react';
 import  { connect } from 'react-redux';
 import { Coins } from './Coins';
 import { getDateCoins } from '../../../redux/coins-reducer';

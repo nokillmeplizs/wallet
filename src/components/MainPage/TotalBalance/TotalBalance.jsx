@@ -19,7 +19,7 @@ export class TotalBalance extends React.Component {
             sum+=this.props.profit[key]
         }
         return sum.toFixed(2);        
-    }  
+    }   
 
     render() {        
         return (
@@ -35,7 +35,7 @@ export class TotalBalance extends React.Component {
                 <div className={this.getTotalProfitInCurrency()>=0?s.profitUp:s.profitDown}>
                                {this.getTotalProfitInCurrency()>=0?'+ ':'- '}
                               ${this.getTotalProfitInCurrency().replace('-','')}
-                               {this.getTotalProfitInCurrency()>=0?'↑':'↓'}
+                               {this.getTotalProfitInCurrency()>=0?' ↑':' ↓'}
                 </div>
             </div>
         )

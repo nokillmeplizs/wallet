@@ -7,11 +7,13 @@ let reducers = combineReducers({
 });
 
 
-let store = createStore(reducers,
-    compose(applyMiddleware(thinkMiddleware),
-        window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-    )
-);
+// let store = createStore(reducers,
+//     compose(applyMiddleware(thinkMiddleware),
+//         window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+//     )
+// );
+
+let store = createStore(reducers,applyMiddleware(thinkMiddleware));
 
 window.store = store;
 

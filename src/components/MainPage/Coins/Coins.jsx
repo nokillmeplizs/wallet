@@ -1,17 +1,16 @@
 import React from 'react';
-import Coin from './Coin/Coin'
-import * as axios from 'axios';
-
+import Coin from './Coin/Coin';
 
 export class Coins extends React.Component {
 
     componentDidMount() {
-        this.props.getDateCoins();
+        this.props.getDateCoins();        
     }
 
-    coinList() {
+    coinList() {       
         return this.props.coins
             .map(coin => <Coin key={coin.id}
+                id={coin.id}
                 name={coin.name}
                 fullName={coin.fullName}
                 amount={coin.amount}

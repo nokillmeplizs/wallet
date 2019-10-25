@@ -1,6 +1,7 @@
 .curBal{    
     display: flex;
     flex-direction: row;
+    margin-right: 10px;
 }
 .curBal img {
     width: 40px;

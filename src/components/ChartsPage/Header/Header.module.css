@@ -1,0 +1,11 @@
+.coin {
+    
+    display: flex;
+    overflow-x: auto;
+    margin-left: 20px;
+    scrollbar-width: none;
+}
+
+.coin::-webkit-scrollbar {
+    display: none;
+  }

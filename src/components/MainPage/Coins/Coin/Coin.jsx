@@ -1,32 +1,13 @@
 import React from 'react';
 import s from './Coin.module.css';
-import Bitcoin from './../../../../assets/btc.svg';
-import Ethereum from './../../../../assets/eth.png';
-import Ripple from './../../../../assets/xrp.png';
 import { NavLink } from 'react-router-dom';
 import { CoinLogo } from './CoinLogo';
 import { AmountCoin } from './AmountCoin';
 import { ProfitCoin } from './ProfitCoin';
 
-const Coin = (props) => {
-    
-     let icon = (coinFullname) =>{
-       switch(coinFullname){
-        case "Bitcoin":
-           return Bitcoin;
-        case "Ethereum":
-            return Ethereum;
-        case "Ripple":
-                return Ripple;
-        default:
-             return "https://www.freepngimg.com/thumb/symbol/88475-exclamation-icons-text-question-mark-computer-red-thumb.png"
-       }       
-     }
-     
-    
-
+const Coin = (props) => {          
     return (
-        <NavLink to="/charts">
+        <NavLink to={"/charts/"+props.id}>
         <div className = {s.wrapper}>
             <div className = {s.wrapperUpPart}>
                 <div className = {s.curBal}> 

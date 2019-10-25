@@ -4,9 +4,8 @@ import Bitcoin from './../../../../assets/btc.svg';
 import Ethereum from './../../../../assets/eth.png';
 import Ripple from './../../../../assets/xrp.png';
 
-export const CoinLogo = (props) => {
-    console.log(props)
-
+export const CoinLogo = (props) => {    
+    
     let icon = (coinFullname) =>{
         switch(coinFullname){
          case "Bitcoin":
