@@ -6,13 +6,13 @@ import Chart from 'chart.js';
       
             
         componentDidMount() {
+            let data = [8223, 7555, 7886, 8112, 8556, 500,4444];
+            let name = ['1', '2', '3', '4', '5', '6','7','8'];
 
-
-
-            var ctx = this.chartRef.current.getContext("2d");
-            var values =  [8223, 7555, 7886, 8112, 8556, 500,4444];
-            var labels = ['1', '2', '3', '4', '5', '6','7'];
-            var myChart = new Chart(ctx, {
+            let ctx = this.chartRef.current.getContext("2d");
+            let values = data;
+            let labels = name;
+            let myChart = new Chart(ctx, {
                 type: 'line',
                 data: {
                     labels: labels,
