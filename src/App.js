@@ -8,7 +8,7 @@ const App = (props) => {
   return (
     <div className="app-wrapper">
       <Route exact path="/" render={() => <MainPage />} />
-      <Route path="/charts" render={() => <ChartsPage />} />
+      <Route path="/charts/:coinId" render={() => <ChartsPage />} />
     </div>
   );
 }

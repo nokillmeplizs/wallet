@@ -9,3 +9,6 @@
 .coin::-webkit-scrollbar {
     display: none;
   }
+.single{
+    margin: 20px;
+}

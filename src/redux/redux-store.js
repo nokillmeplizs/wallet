@@ -1,9 +1,11 @@
 import { createStore, combineReducers, applyMiddleware, compose } from "redux";
 import coinsReducer from "./coins-reducer";
 import thinkMiddleware from "redux-thunk";
+import chartsReducer from "./charts-reducer";
 
 let reducers = combineReducers({
-    coins: coinsReducer
+    coins: coinsReducer,
+    data: chartsReducer
 });
 
 
